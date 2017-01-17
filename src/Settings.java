@@ -10,17 +10,15 @@ import java.util.List;
 
 
 
-public class CommandLine {
-
+public class Settings {
 
     @Parameter
     private List<String> parameters = new ArrayList<String>();
 
-    @Parameter(names = "-help", description = "List possible commands.")
+    @Parameter(names = {"-help", "-h"}, description = "List possible commands.")
     private String help = "-help List possible commands.";
 
+    @Parameter(names = {"-addBook", "-a"}, description = "Add book.")
+    private String addBook;
 
-    public void welcomeMessage() {
-        System.out.println("Welcome to Tyler's Library App! Type \"help\" for list of commands");
-    }
 }
